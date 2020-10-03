@@ -1,0 +1,23 @@
+<h1>User list</h1>
+<br>
+<% if @users.any? %>
+  <table class="table table-striped table-hover">
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Country</th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.country %></td>
+      </tr>
+      <% end %>
+  </table>
+
+<% else %>
+  <h3>No users found</h3>
+<% end %>
