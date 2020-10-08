@@ -9,6 +9,7 @@
       <th>Email</th>
       <th>Country</th>
       <th>Post count</th>
+      <th>Comment count</th>
     </tr>
     <% @users.each do |user| %>
       <tr>
@@ -17,7 +18,8 @@
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.country %></td>
-        <td><%= user.post_count %></td>
+        <td><%= user.posts_count %></td>
+        <td><%= user.comments_count %></td>
       </tr>
       <% end %>
   </table>

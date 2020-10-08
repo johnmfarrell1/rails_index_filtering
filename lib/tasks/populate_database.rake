@@ -14,4 +14,11 @@ task populate_database: :environment do
                  status: Post::STATUSES.sample)
 
   end
+
+  1000.times do
+    Comment.create!(text: Faker::Quote.famous_last_words,
+                    user: User.all.sample,
+                    post: Post.all.sample,
+                    status: Comment::STATUSES.sample)
+  end
 end
