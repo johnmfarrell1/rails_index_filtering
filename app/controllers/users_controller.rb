@@ -6,6 +6,6 @@ class UsersController < ApplicationController
   private
 
   def filtering_params
-    params.slice(*User.search_scopes)
+    params.slice(*User.filter_scopes)
   end
 end
